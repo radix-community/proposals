@@ -3,6 +3,7 @@
 | Number                    | Title                                                                 | Type          | Status   |
 |---------------------------|-----------------------------------------------------------------------|---------------|----------|
 | [RCP-0000](RCP-0000.md)   | RCP Template                                                          | Informational | Draft    |
+| [RCP-0001](https://github.com/radix-community/proposals/discussions/1) | Validator Node Metadata   | Proposal      | Discussion |
 
 ---
 
