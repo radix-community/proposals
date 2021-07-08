@@ -1,0 +1,381 @@
+{
+  "$id": "https://radix-community.org/.well-defined/radix-meta.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "RCP-0001 Extended Metadata for Radix Validators",
+  "examples": [
+    {
+      "summary": "Awesome Radix Staking is Awesome",
+      "description": "Based in sunny Glasgow, Awesome Radix Staking is a premier Radix Validator Node operator with low fees, unbeatable uptime, and friendly, knowledgeable support.",
+      "country_iso2": "GB",
+      "media_assets": {
+        "icon_png_url": "https://example.com/assets/icon_192x192.png"
+      },
+      "contact": {
+        "language_iso2": "en;kr;zh",
+        "primary": "email",
+        "email": "hello@example.com",
+        "twitter": "example_tw",
+        "telegram": "example_tg",
+        "discord": "example#1234",
+        "facebook": "example_facebook",
+        "youtube": "example_yt",
+        "feed": "https://example.com/rss.xml",
+        "github": "example_gh",
+        "qq": "1234567890",
+        "wechat": "example_wc",
+        "vk": "example_vk",
+        "kakao": "example_kk"
+      },
+      "nodes": [
+        {
+          "id": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
+          "role": "validator"
+        },
+        {
+          "id": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut1",
+          "role": "full"
+        }
+      ],
+      "legal_entity": {
+        "name": "Awesome Radix Staking Limited",
+        "address": "Suite 1024, 1 Bath Street, Glasgow, G2 3PN",
+        "country_iso2": "GB",
+        "entity_id": "123456789"
+      }
+    }
+  ],
+  "maxLength": 4096,
+  "required": [],
+  "type": "object",
+  "properties": {
+    "summary": {
+      "$id": "#/properties/summary",
+      "title": "summary",
+      "description": "Node operator summary",
+      "examples": [
+        "Awesome Radix Staking is Awesome"
+      ],
+      "maxLength": 120,
+      "type": "string"
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "title": "description",
+      "description": "Node operator description",
+      "examples": [
+        "Based in sunny Glasgow, Awesome Radix Staking is a premier Radix Validator Node operator with low fees, unbeatable uptime, and friendly, knowledgeable support."
+      ],
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "country_iso2": {
+      "$id": "#/properties/country_iso2",
+      "title": "operator country code",
+      "description": "ISO 3166 2 letter country code as defined by https://www.iso.org/iso-3166-country-codes.html",
+      "examples": [
+        "GB"
+      ],
+      "maxLength": 2,
+      "minLength": 2,
+      "type": "string"
+    },
+    "media_assets": {
+      "$id": "#/properties/media_assets",
+      "type": "object",
+      "title": "media assets",
+      "description": "Media assets",
+      "examples": [
+        {
+          "icon_png_url": "https://example.com/assets/icon_192x192.png"
+        }
+      ],
+      "required": [],
+      "properties": {
+        "icon_png_url": {
+          "$id": "#/properties/media_assets/properties/icon_png_url",
+          "title": "icon url",
+          "description": "Icon url",
+          "examples": [
+            "https://example.com/assets/icon_192x192.png"
+          ],
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": true
+    },
+    "contact": {
+      "$id": "#/properties/contact",
+      "type": "object",
+      "title": "contact details",
+      "description": "Node operator contact details",
+      "examples": [
+        {
+          "language_iso2": "en;kr;zh",
+          "primary": "email",
+          "email": "hello@example.com",
+          "twitter": "example_tw",
+          "telegram": "example_tg",
+          "discord": "example#1234",
+          "facebook": "example_facebook",
+          "youtube": "example_yt",
+          "feed": "https://example.com/rss.xml",
+          "github": "example_gh",
+          "qq": "1234567890",
+          "wechat": "example_wc",
+          "vk": "example_vk",
+          "kakao": "example_kk"
+        }
+      ],
+      "required": [],
+      "properties": {
+        "language_iso2": {
+          "$id": "#/properties/contact/properties/language_iso2",
+          "title": "languages",
+          "description": "Languages supported by the Node Operator",
+          "examples": [
+            "en;kr;zh"
+          ],
+          "type": "string"
+        },
+        "primary": {
+          "$id": "#/properties/contact/properties/primary",
+          "type": "string",
+          "title": "primary contact method",
+          "description": "Preferred contact method type",
+          "examples": [
+            "email"
+          ]
+        },
+        "email": {
+          "$id": "#/properties/contact/properties/email",
+          "title": "email",
+          "description": "Email address",
+          "examples": [
+            "hello@example.com"
+          ],
+          "type": "string",
+          "format": "email"
+        },
+        "twitter": {
+          "$id": "#/properties/contact/properties/twitter",
+          "type": "string",
+          "title": "twitter",
+          "description": "Twitter account name",
+          "examples": [
+            "example_tw"
+          ]
+        },
+        "telegram": {
+          "$id": "#/properties/contact/properties/telegram",
+          "type": "string",
+          "title": "telegram",
+          "description": "Telegram account name",
+          "examples": [
+            "example_tg"
+          ]
+        },
+        "discord": {
+          "$id": "#/properties/contact/properties/discord",
+          "type": "string",
+          "title": "discord",
+          "description": "Discord account name",
+          "examples": [
+            "example#1234"
+          ]
+        },
+        "facebook": {
+          "$id": "#/properties/contact/properties/facebook",
+          "type": "string",
+          "title": "facebook",
+          "description": "Facebook account name",
+          "examples": [
+            "example_facebook"
+          ]
+        },
+        "youtube": {
+          "$id": "#/properties/contact/properties/youtube",
+          "title": "youtube",
+          "description": "Youtube Channel",
+          "examples": [
+            "example_yt"
+          ],
+          "type": "string"
+        },
+        "feed": {
+          "$id": "#/properties/contact/properties/feed",
+          "type": "string",
+          "format": "uri",
+          "title": "feed",
+          "description": "RSS feed url",
+          "examples": [
+            "https://example.com/rss.xml"
+          ]
+        },
+        "github": {
+          "$id": "#/properties/contact/properties/github",
+          "title": "github",
+          "description": "Github account name",
+          "examples": [
+            "example_gh"
+          ],
+          "type": "string"
+        },
+        "qq": {
+          "$id": "#/properties/contact/properties/qq",
+          "type": "string",
+          "title": "qq",
+          "description": "QQ account number",
+          "examples": [
+            "1234567890"
+          ]
+        },
+        "wechat": {
+          "$id": "#/properties/contact/properties/wechat",
+          "type": "string",
+          "title": "wechat",
+          "description": "Wechat account name",
+          "examples": [
+            "example_wc"
+          ]
+        },
+        "vk": {
+          "$id": "#/properties/contact/properties/vk",
+          "type": "string",
+          "title": "vk",
+          "description": "VK account name",
+          "examples": [
+            "example_vk"
+          ]
+        },
+        "kakao": {
+          "$id": "#/properties/contact/properties/kakao",
+          "type": "string",
+          "title": "kakao",
+          "description": "Kakao account name",
+          "examples": [
+            "example_kk"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "nodes": {
+      "$id": "#/properties/nodes",
+      "type": "array",
+      "title": "nodes",
+      "description": "Node details",
+      "examples": [
+        [
+          {
+            "id": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
+            "role": "validator"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/nodes/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/nodes/items/anyOf/0",
+            "title": "node",
+            "description": "A Radix Node",
+            "examples": [
+              {
+                "id": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
+                "role": "validator"
+              }
+            ],
+            "required": [],
+            "type": "object",
+            "properties": {
+              "id": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/id",
+                "title": "node id",
+                "description": "Unique Node Address",
+                "examples": [
+                  "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0"
+                ],
+                "uniqueItems": true,
+                "type": "string"
+              },
+              "role": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/role",
+                "title": "node role",
+                "description": "Node role",
+                "enum": [
+                  "full",
+                  "validator",
+                  "archive"
+                ],
+                "examples": [
+                  "full,validator,archive"
+                ],
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "legal_entity": {
+      "$id": "#/properties/legal_entity",
+      "type": "object",
+      "title": "legal entity details",
+      "description": "Legal entity details",
+      "examples": [
+        {
+          "name": "Awesome Radix Staking Limited",
+          "address": "Suite 1024, 1 Bath Street, Glasgow, G2 3PN",
+          "country_iso2": "GB",
+          "entity_id": "123456789"
+        }
+      ],
+      "required": [],
+      "properties": {
+        "name": {
+          "$id": "#/properties/legal_entity/properties/name",
+          "type": "string",
+          "title": "legal entity name",
+          "description": "Legal entity name",
+          "examples": [
+            "Awesome Radix Staking Limited"
+          ]
+        },
+        "address": {
+          "$id": "#/properties/legal_entity/properties/address",
+          "type": "string",
+          "title": "legal entity address",
+          "description": "Legal entity address",
+          "examples": [
+            "Suite 1024, 1 Bath Street, Glasgow, G2 3PN"
+          ]
+        },
+        "country_iso2": {
+          "$id": "#/properties/legal_entity/properties/country_iso2",
+          "title": "legal entity country code",
+          "description": "ISO 3166 2 letter country code as defined by https://www.iso.org/iso-3166-country-codes.html",
+          "examples": [
+            "GB"
+          ],
+          "maxLength": 2,
+          "minLength": 2,
+          "type": "string"
+        },
+        "entity_id": {
+          "$id": "#/properties/legal_entity/properties/entity_id",
+          "type": "string",
+          "title": "legal entity id",
+          "description": "Legal entity id",
+          "examples": [
+            "123456789"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
