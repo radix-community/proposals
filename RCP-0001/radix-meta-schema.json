@@ -11,7 +11,7 @@
         "icon_png_url": "https://example.com/assets/icon_192x192.png"
       },
       "contact": {
-        "language_iso2": "en;kr;zh",
+        "language_iso2": "en;ko;zh",
         "primary": "email",
         "email": "hello@example.com",
         "twitter": "example_tw",
@@ -111,7 +111,7 @@
       "description": "Node operator contact details",
       "examples": [
         {
-          "language_iso2": "en;kr;zh",
+          "language_iso2": "en;ko;zh",
           "primary": "email",
           "email": "hello@example.com",
           "twitter": "example_tw",
