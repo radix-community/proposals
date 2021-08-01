@@ -28,11 +28,11 @@
       },
       "nodes": [
         {
-          "id": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
+          "address": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
           "role": "validator"
         },
         {
-          "id": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut1",
+          "address": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut1",
           "role": "full"
         }
       ],
@@ -268,7 +268,7 @@
       "examples": [
         [
           {
-            "id": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
+            "address": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
             "role": "validator"
           }
         ]
@@ -283,16 +283,16 @@
             "description": "A Radix Node",
             "examples": [
               {
-                "id": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
+                "address": "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0",
                 "role": "validator"
               }
             ],
             "required": [],
             "type": "object",
             "properties": {
-              "id": {
-                "$id": "#/properties/nodes/items/anyOf/0/properties/id",
-                "title": "node id",
+              "address": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/address",
+                "title": "node address",
                 "description": "Unique Node Address",
                 "examples": [
                   "vb1qtm62uax64hz4n4zprknjmn83s2nmpcd07x2usc2jh7u8jrtu27gcklgut0"
